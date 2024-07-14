@@ -1,0 +1,14 @@
+Origin = script.Parent.Position
+M = 0
+
+for i = 1,math.huge do
+	wait(0.01)
+	M = M+1
+	if M == 5000 then
+		script.Parent.Position = Origin
+		M = 0
+	else
+		script.Parent.CFrame = script.Parent.CFrame * CFrame.new(0, 0, -0.7) * CFrame.fromEulerAnglesXYZ(0, 0, 0)
+	end
+end
+
